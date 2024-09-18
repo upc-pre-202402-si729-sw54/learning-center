@@ -1,27 +1,45 @@
-# LearningCenter
+# ACME Learning Center Web Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.4.
+## Summary
 
-## Development server
+ACME Learning Center Application, illustrating CRUD behavior and in-app navigation, with Angular Router. It also uses a JSON Server Fake API.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+Features includes are:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Material Design
+- Internationalization (i18n)
+- Environment configuration
+- JSON Server Fake API
+- CRUD ops
+- In-App navigation
+- Domain-Driver Design approach
+
+## Frameworks and Libraries
+
+- Angular Material
+- ngx-translate
+- ngx-translate/http-loader
+- JSON Server stable version
+
+## Fake API start
+
+```
+cd server
+sh start.sh
+```
+
+## Development Server
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200`.
+```
+ng serve --configuration development
+```
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Run `ng e2e` for build app.
+```
+ng e2e
+```
