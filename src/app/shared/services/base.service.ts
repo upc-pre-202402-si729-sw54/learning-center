@@ -12,12 +12,12 @@ export class BaseService<T> {
 
   protected http: HttpClient = inject(HttpClient);
 
-  protected baseUrl: string = `${environments.serverBasePath}`; //http://localhost:3000/api/v1
+  protected baseUrl: string = `${environments.serverBasePath}`;
 
-  protected resourceEndPoint: string = '/resources'; // /clients /orders /users
+  protected resourceEndPoint: string = '/resources';
 
   protected resourcePath(): string {
-    return `${this.baseUrl}${this.resourceEndPoint}`; // http://localhost:3000/api/v1/clients
+    return `${this.baseUrl}${this.resourceEndPoint}`;
   }
 
   protected handleError(error: HttpErrorResponse) {
