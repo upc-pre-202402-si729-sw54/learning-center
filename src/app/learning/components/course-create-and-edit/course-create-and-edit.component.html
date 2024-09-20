@@ -1,0 +1,15 @@
+<h2>{{ editMode ? 'Edit course' : 'New Course' }}</h2>
+<div>
+  <form #courseForm="ngForm" (submit)="onSubmit()" class="form-row">
+    <mat-form-field id="title-form-field">
+      <input matInput [(ngModel)]="course.title" name="title" placeholder="Title" required>
+    </mat-form-field>
+    <mat-form-field id="description-form-field">
+      <input matInput [(ngModel)]="course.description" name="description" placeholder="Description" required>
+    </mat-form-field>
+    <ng-container>
+      <button color="primary" mat-raised-button>{{ editMode ? 'Update' : 'Add' }}</button>
+      <button color="warn" mat-raised-button (click)="onCancel()">Cancel</button>
+    </ng-container>
+  </form>
+</div>
