@@ -41,7 +41,7 @@ export class BaseService<T> {
   }
 
   public update(id: any, item: any): Observable<T> {
-    return this.http.put<T>(this.resourcePath(), JSON.stringify(item), this.httpOptions)
+    return this.http.put<T>(`${this.resourcePath()}/${id}`, JSON.stringify(item), this.httpOptions)
       .pipe(retry(2), catchError(this.handleError));
   }
 
